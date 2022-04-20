@@ -16,8 +16,7 @@ class _MyLoginState extends State<MyLogin> {
   String name = "";
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      
+    return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
         children: [
@@ -31,9 +30,9 @@ class _MyLoginState extends State<MyLogin> {
                   style: TextStyle(color: Colors.black, fontSize: 33),
                 ),
                 Text(
-              'welcome $name',
-              style: TextStyle(color: Colors.black, fontSize: 33),
-            ),
+                  'welcome $name',
+                  style: TextStyle(color: Colors.black, fontSize: 33),
+                ),
               ],
             ),
           ),
@@ -57,21 +56,20 @@ class _MyLoginState extends State<MyLogin> {
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(2000),
                               )),
-                              onChanged: (value){
-                                setState(() {
-                                  name = value;
-                                });
-                              },
+                          onChanged: (value) {
+                            setState(() {
+                              name = value;
+                            });
+                          },
                         ),
                         SizedBox(
                           height: 30,
                         ),
                         TextFormField(
-                          validator: (value){
-                            if(value == null){
+                          validator: (value) {
+                            if (value == null) {
                               return "null value";
-                            }
-                            else{
+                            } else {
                               return null;
                             }
                           },
@@ -86,14 +84,14 @@ class _MyLoginState extends State<MyLogin> {
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(2000),
                               )),
-                              onChanged: (value){
-                                setState(() {
-                                  passwd = value;
-                                });
-                              },
+                          onChanged: (value) {
+                            setState(() {
+                              passwd = value;
+                            });
+                          },
                         ),
                         SizedBox(
-                          height: 40,
+                          height: 60,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -101,27 +99,19 @@ class _MyLoginState extends State<MyLogin> {
                             Text(
                               'Sign in',
                               style: TextStyle(
-                              
-                                  fontSize: 27, fontWeight: FontWeight.w700
-                                  
-                                  ),
-                                
+                                  fontSize: 27, fontWeight: FontWeight.w700),
                             ),
                             CircleAvatar(
-                              
                               radius: 50,
                               backgroundColor: Color(0xff4c505b),
                               child: IconButton(
-                      
                                   color: Colors.white,
-                                  
                                   onPressed: () {
-                                    
                                     // ignore: unrelated_type_equality_checks
-                                    if(c1 == "smd123"){
-                                     Navigator.pushNamed(context, 'profile');
+                                    if (c1 == "smd123") {
+                                      Navigator.pushNamed(context, 'profile');
                                     }
-                                    // 
+                                    //
                                   },
                                   icon: const Icon(
                                     Icons.arrow_forward,
@@ -150,9 +140,7 @@ class _MyLoginState extends State<MyLogin> {
                               style: ButtonStyle(),
                             ),
                             TextButton(
-                                onPressed: () {
-                                
-                                },
+                                onPressed: () {},
                                 child: Text(
                                   'Forgot Password',
                                   style: TextStyle(
